@@ -1,0 +1,117 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_202" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "insets rel,hidemode 3"
+			"$columnConstraints": "[fill][fill][fill][fill][fill][fill][grow,fill][grow,fill][fill][fill][fill][fill]"
+			"$rowConstraints": "[][][grow,fill]"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Mandala"
+			"$locationPolicy": 1
+			"$sizePolicy": 1
+			auxiliary() {
+				"JavaCodeGenerator.postInitCode": "this.contentPane = (JPanel) this.getContentPane();\nthis.contentPane.setBackground(this.getBackground());\nLayoutManager layout = this.contentPane.getLayout();\nif (layout instanceof MigLayout) {\n    this.migLayoutManager = (MigLayout) layout;\n}\n"
+			}
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnOtevrit"
+				"text": "Otevřít soubor"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "priKliknutiNaBtnOtevrit", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0 6 1,growx"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnUlozit"
+				"text": "Uložit soubor"
+				"preferredSize": new java.awt.Dimension( 133, 30 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "priKliknutiNaBtnUlozit", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0 6 1,growx"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labAktualniBarva"
+				"text": "Aktuální barva:"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 1"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radBtnBarva1"
+				"preferredSize": new java.awt.Dimension( 32, 32 )
+				"background": new java.awt.Color( 145, 194, 20, 255 )
+				"horizontalAlignment": 0
+				"border": &BevelBorder0 new javax.swing.border.BevelBorder( 0, null, null, null, null )
+				"foreground": sfield java.awt.Color white
+				"margin": new java.awt.Insets( 2, 2, 2, 2 )
+				"borderPainted": true
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "priStiskuRadBtnBarva", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 1"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radBtnBarva2"
+				"preferredSize": new java.awt.Dimension( 32, 32 )
+				"background": new java.awt.Color( 201, 179, 22, 255 )
+				"horizontalAlignment": 0
+				"border": #BevelBorder0
+				"foreground": sfield java.awt.Color white
+				"margin": new java.awt.Insets( 2, 2, 2, 2 )
+				"borderPainted": true
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "priStiskuRadBtnBarva", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 2 1"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radBtnBarva3"
+				"preferredSize": new java.awt.Dimension( 32, 32 )
+				"background": new java.awt.Color( 179, 129, 29, 255 )
+				"horizontalAlignment": 0
+				"border": #BevelBorder0
+				"foreground": sfield java.awt.Color white
+				"margin": new java.awt.Insets( 2, 2, 2, 2 )
+				"borderPainted": true
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "priStiskuRadBtnBarva", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 1"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radBtnBarva4"
+				"preferredSize": new java.awt.Dimension( 32, 32 )
+				"background": new java.awt.Color( 201, 95, 22, 255 )
+				"horizontalAlignment": 0
+				"border": #BevelBorder0
+				"foreground": sfield java.awt.Color white
+				"margin": new java.awt.Insets( 2, 2, 2, 2 )
+				"borderPainted": true
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "priStiskuRadBtnBarva", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 4 1"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radBtnBarva5"
+				"preferredSize": new java.awt.Dimension( 32, 32 )
+				"background": new java.awt.Color( 194, 43, 25, 255 )
+				"horizontalAlignment": 0
+				"border": #BevelBorder0
+				"foreground": sfield java.awt.Color white
+				"margin": new java.awt.Insets( 2, 2, 2, 2 )
+				"borderPainted": true
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "priStiskuRadBtnBarva", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 5 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labObrazek"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "priKliknutiNaLabPlocha", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 2 8 1,align left top,grow 0 0"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 677, 754 )
+		} )
+	}
+}
